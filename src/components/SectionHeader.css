@@ -1,0 +1,55 @@
+/* Base styles */
+.section-header {
+  text-align: center;
+  margin: 0 auto 3rem;
+  max-width: 800px;
+  padding: 0 1rem;
+}
+
+.section-title {
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: currentColor;
+}
+
+.section-subtitle {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-top: 1rem;
+}
+
+/* Variants */
+.section-header.light {
+  color: white;
+}
+
+.section-header.light .section-subtitle {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.section-header.dark {
+  color: var(--text-primary);
+}
+
+.section-header.accent {
+  color: var(--accent-color);
+}
+
+.section-header.accent .section-title::after {
+  background: var(--accent-color);
+}
